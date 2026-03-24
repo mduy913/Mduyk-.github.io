@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shop Proxy FF</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial;
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      margin: 0;
+    }
+
+    h1 {
+      color: #38bdf8;
+      padding: 20px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      margin: 15px;
+      border-radius: 12px;
+    }
+
+    button {
+      background: #22c55e;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    /* Popup */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+    }
+
+    .popup-content {
+      background: #1e293b;
+      padding: 20px;
+      margin: 100px auto;
+      width: 80%;
+      border-radius: 12px;
+    }
+
+    input {
+      padding: 10px;
+      width: 80%;
+      border-radius: 6px;
+      border: none;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>SHOP PROXY FREE FIRE</h1>
+
+<div class="card">
+  <h2>Proxy FF 1 Day</h2>
+  <p>Giá: 20k</p>
+  <button onclick="openPopup()">Mua ngay</button>
+</div>
+
+<div class="card">
+  <h2>Proxy FF 7 Day</h2>
+  <p>Giá: 40k</p>
+  <button onclick="openPopup()">Mua ngay</button>
+</div>
+
+<div class="card">
+  <h2>Proxy FF 30 Day</h2>
+  <p>Giá: 60k</p>
+  <button onclick="openPopup()">Mua ngay</button>
+</div>
+
+<div class="card">
+  <h2>Proxy FF Vĩnh Viễn</h2>
+  <p>Giá: 300k</p>
+  <button onclick="openPopup()">Mua ngay</button>
+</div>
+
+<h2>Thanh toán</h2>
+
+<div class="card">
+  <p>Ngân hàng: MB Bank</p>
+  <p>STK: 0588807300000</p>
+  <p>Tên: CAO MINH DUY</p>
+</div>
+
+<!-- Popup -->
+<div class="popup" id="popup">
+  <div class="popup-content">
+    <h3>Nhập Zalo</h3>
+    <p>Nhập Zalo, chúng tôi sẽ liên hệ sau khi bạn chuyển khoản</p>
+
+    <input id="zalo" type="text" placeholder="Nhập số Zalo">
+
+    <br><br>
+    <button onclick="gui()">Gửi</button>
+    <button onclick="closePopup()">Đóng</button>
+  </div>
+</div>
+
+<script>
+function openPopup() {
+  document.getElementById("popup").style.display = "block";
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+
+function gui() {
+  let sdt = document.getElementById("zalo").value;
+
+  if(sdt == "") {
+    alert("Vui lòng nhập Zalo!");
+  } else {
+    alert("Đã gửi! Chúng tôi sẽ liên hệ bạn.");
+    closePopup();
+  }
+}
+</script>
+
+</body>
+</html>
